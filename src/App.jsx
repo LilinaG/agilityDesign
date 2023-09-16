@@ -1,13 +1,12 @@
 import './App.css'
+import Navbar from './atoms/navbar/Navbar';
 
 function App() {
   
-
   return (
-    <>
-      Hola mundo!
-    </>
+    <Navbar></Navbar>
   )
 }
 
 export default App
+ 
