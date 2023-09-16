@@ -1,10 +1,10 @@
 import './App.css'
-import Navbar from './atoms/navbar/Navbar';
+import StickyNavbar from '../src/atoms/navbar/StickyNavbar';
 
 function App() {
   
   return (
-    <Navbar></Navbar>
+    <StickyNavbar />
   )
 }
 
