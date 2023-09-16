@@ -5,8 +5,8 @@ import {
   Typography,
   Button,
   IconButton,
-  Card,
 } from "@material-tailwind/react";
+
  
 export default function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -23,13 +23,14 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="#0D0F13"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
           INICIO
         </a>
       </Typography>
+      
 
       <Typography
         as="li"
@@ -45,7 +46,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="#0D0F13"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -56,7 +57,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="#0D0F13"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -67,7 +68,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="#0D0F13"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
