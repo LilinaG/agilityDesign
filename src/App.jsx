@@ -1,14 +1,15 @@
 
-import './App.css'
-import StickyNavbar from '../src/atoms/navbar/StickyNavbar';
 
-function App() {
+import Router from "./configuration/Router"
 
-  
-  return (
-    <StickyNavbar />
-  )
+
+
+const App = () => {
+
+    return (
+        <>
+        <Router/>
+        </>
+    )
 }
-
 export default App
- 
