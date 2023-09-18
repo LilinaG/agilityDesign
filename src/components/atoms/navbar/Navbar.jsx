@@ -3,7 +3,7 @@ import logoTransparent from '../../../assets/images/logoTransparent.png';
 
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   IconButton,
@@ -25,7 +25,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="#0D0F13"
+        color="blue-gray"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -48,7 +48,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="#0D0F13"
+        color="blue-gray"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -59,7 +59,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="#0D0F13"
+        color="blue-gray"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -70,7 +70,7 @@ export default function StickyNavbar() {
       <Typography
         as="li"
         variant="small"
-        color="#0D0F13"
+        color="blue-gray"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -137,15 +137,20 @@ export default function StickyNavbar() {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
-          {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>CONTACTO</span>
-          </Button>
-        </MobileNav>
+        <Collapse open={openNav}>
+        {openNav && (
+            <div className="bg-white p-4 lg:hidden">
+              {navList}
+              <Button variant="gradient" size="sm" fullWidth className="mb-2">
+                <span>CONTACTO</span>
+              </Button>
+            </div>
+          )}
+        </Collapse>
       </Navbar>
-      
     </div>
   );
 }
+
+
 
