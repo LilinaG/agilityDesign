@@ -11,9 +11,6 @@ import Navbar from "./components/atoms/Navbar"
 const App = () => {
 
     return (
-        // <>
-        // <Router/>
-        // </>
 
         <>
         <Navbar/>
