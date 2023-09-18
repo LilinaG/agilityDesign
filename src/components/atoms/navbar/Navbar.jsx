@@ -1,5 +1,5 @@
 import React from "react";
-// import logoTransparent from '../../../assets/images';
+import logoTransparent from '../../../assets/images/logoTransparent.png';
 
 import {
   Navbar,
@@ -82,18 +82,15 @@ export default function StickyNavbar() {
   );
  
   return (
-    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
-        <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
-          >
-            AGILITY DESING
-          </Typography>
+  <div className="-m-4 max-h-[768px] w-[calc(100%+48px)]">
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-0 px-14 lg:px-8 lg:py-4">
+   
+        <div className="flex items-center justify-between text-blue-gray-900 mt-1 mx-10">
+          
+        <img className="w-72 h-20" src={logoTransparent} alt="logo" />
+         
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className="mr-0 hidden lg:block">{navList}</div>
             <Button
               variant="gradient"
               size="sm"
