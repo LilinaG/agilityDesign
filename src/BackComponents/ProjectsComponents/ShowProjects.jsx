@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const endpoint = 'http://127.0.0.1:8000/api';
 
-export function ShowProjects() {
+export default function ShowProjects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -13,8 +13,9 @@ export function ShowProjects() {
 
   const getAllProjects = async () => {
     const response = await axios.get(`${endpoint}/admin/projects`);
-    setProjects(response.data); // Se espera que los datos de la respuesta estén en response.data
+    setProjects(response); // Se espera que los datos de la respuesta estén en response.data
   };
+console.log(projects.data)
 
   const deleteProject = async (id) => {
     await axios.delete(`${endpoint}/admin/projects/${id}`);
@@ -43,7 +44,7 @@ export function ShowProjects() {
         </thead>
 
         <tbody>
-          {projects.map((project) => (
+          {projects.data.map((project) => (
             <tr key={project.id}>
               <td>{project.id}</td>
               <td>{project.title}</td>

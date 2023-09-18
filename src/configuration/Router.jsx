@@ -1,8 +1,8 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ShowProjects } from '../BackComponents/ProjectsComponents/ShowProjects';
-import { CreateProjects } from '../BackComponents/ProjectsComponents/CreateProjects';
-import { EditProjects } from '../BackComponents/ProjectsComponents/EditProjects';
+import ShowProjects  from '../BackComponents/ProjectsComponents/ShowProjects';
+import CreateProjects  from '../BackComponents/ProjectsComponents/CreateProjects';
+import EditProjects  from '../BackComponents/ProjectsComponents/EditProjects';
 
 const Router = () => {
 
