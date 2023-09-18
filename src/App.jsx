@@ -1,7 +1,10 @@
 
 
 import Router from "./configuration/Router"
-import Navbar from "./components/atoms/navbar/Navbar"
+//import Header from "./components/atoms/Header"
+import './index.css'
+import Navbar from "./components/atoms/Navbar"
+
 
 
 

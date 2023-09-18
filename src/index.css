@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Mona-Sans';
-  src: url('/fonts/mona-sans.woff2') format('woff2'),
-       url('/fonts/mona-sans.woff') format('woff');
+  font-family: 'mona-sans';
+  src: url('./src/assets/fonts/MonaSans-Black.woff2') format('woff2'),
+       url('./src/assets/fonts/MonaSans-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
+
+
+
+
