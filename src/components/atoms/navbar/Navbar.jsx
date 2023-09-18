@@ -1,4 +1,6 @@
 import React from "react";
+// import logoTransparent from '../../../assets/images';
+
 import {
   Navbar,
   MobileNav,
