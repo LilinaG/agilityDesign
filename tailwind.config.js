@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line no-undef
 module.exports = {
@@ -5,9 +6,47 @@ module.exports = {
         "./index.html",
         "./src/**/*.{js,jsx,ts,tsx}"
       ],
+    important: true,
+      // Active dark mode on class basis
+  darkMode: "class",
   theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+    extend: {
+      backgroundImage:{
+        'hand2': 'url("./src/assets/images/hand2.jpg")'
+      }
+      },
+    screens: {
+
+        'sm': '320px',
+
+        'md': '768px',
+        // => @media (min-width: 640px) { ... }
+  
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+        '2xl': '1536px',
+
+      },
+    },
+    screens: {
+      light: { raw: "(prefers-color-scheme: light)" },
+      dark: { raw: "(prefers-color-scheme: dark)" }
+    }
+  }
+
+//   variants: {
+//     extend: {
+//       //backgroundColor: ["checked"],
+//       borderColor: ["checked"],
+//       inset: ["checked"],
+//       zIndex: ["hover", "active"],
+//     }
+//   }
+//   plugins: [],
+   
+// }
+
 

@@ -1,10 +1,16 @@
 
 
-import Router from "./configuration/Router"
-//import Header from "./components/atoms/Header"
+//import Router from "./configuration/Router"
 import './index.css'
-import Navbar from "./components/atoms/Navbar"
-import { ButtonDefault } from "./components/atoms/ButtonDefault"
+//import Footer from './components/atoms/Footer'
+import Banner from "./components/molecules/Banner"
+//import Prueba from "./components/molecules/Prueba"
+//import Services from "./pages/Services"
+import Navbar from './components/atoms/Navbar'
+
+
+
+
 
 
 
@@ -14,8 +20,16 @@ const App = () => {
     return (
 
         <>
-        {/* <Navbar/> */}
-        <ButtonDefault/>
+        {/* <Prueba/> */}
+        
+        <Navbar/> 
+        
+        {/* <Banner /> */}
+        {/* <Footer/>  
+        <Services /> */}
+
+
+        
       
         </>
     )
