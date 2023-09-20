@@ -11,6 +11,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        'mona-sans': ['Mona-Sans', 'sans'], // 'Mona-Sans' es el nombre de la fuente y 'sans' es el fallback
+      },
       backgroundImage:{
         'hand2': 'url("./src/assets/images/hand2.jpg")'
       }
@@ -37,16 +40,6 @@ module.exports = {
     }
   }
 
-//   variants: {
-//     extend: {
-//       //backgroundColor: ["checked"],
-//       borderColor: ["checked"],
-//       inset: ["checked"],
-//       zIndex: ["hover", "active"],
-//     }
-//   }
-//   plugins: [],
-   
-// }
+
 
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';    
 import logoTransparent from '../../assets/images/logoTransparent.png'
 
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -10,28 +9,29 @@ const Navbar = () => {
   };
 
   return (
-
-    <nav className="bg-opacity-0 text-black text-bold">
+    <nav className={`fixed z-20 top-0 left-0 right-0 text-black text-bold font-mona-sans ${open ? 'bg-white' : 'bg-transparent'}`}>
+  
+  
       <div className="container mx-auto py-4">
-        <div className="flex items-center justify-around font-sans ">
+        <div className="flex items-center justify-between font-sans">
           <div className="flex items-center">
-            <img className="w-72 h-20 ml-[-2rem]" src={logoTransparent} alt="logo" />
+            <img className="w-72 h-20" src={logoTransparent} alt="logo" />
           </div>
-          <div className="hidden md:flex space-x-10 ">
-            <a href="#" className="hover:text-gray-400 uppercase text-base font-bold">Inicio</a>
-            <a href="#" className="hover:text-gray-400 uppercase text-base font-bold">Servicios</a>
-            <a href="#" className="hover:text-gray-400 uppercase text-base font-bold">Galería</a>
-            <a href="#" className="hover:text-gray-400 uppercase text-base font-bold">Metodología</a>
-            <a href="#" className="hover:text-gray-400 uppercase text-base font-bold mr-[-2rem]">Conócenos</a>
+          <div className="hidden md:flex space-x-10 mr-20">
+            <a href="#" className="hover:text-gray-400 uppercase text-base font-mona-sans font-bold">Inicio</a>
+            <a href="#" className="hover:text-gray-400 uppercase text-base font-mona-sans font-bold">Servicios</a>
+            <a href="#" className="hover:text-gray-400 uppercase text-base font-mona-sans font-bold">Galería</a>
+            <a href="#" className="hover:text-gray-400 uppercase text-base font-mona-sans font-bold">Metodología</a>
+            <a href="#" className="hover:text-gray-400 uppercase text-base font-mona-sans font-bold">Conócenos</a>
           </div>
           <div className="md:hidden flex items-center">
-            <button
-              className="text-2xl text-black focus:outline-none"
-              onClick={toggleNavbar}
-            >
-              ☰
-            </button>
-          </div>
+  <button
+    className="text-2xl text-black focus:outline-none"
+    onClick={toggleNavbar}
+  >
+    ☰
+  </button>
+</div>
         </div>
       </div>
       {open && (
