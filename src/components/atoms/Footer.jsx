@@ -3,7 +3,7 @@
 function Footer() {
   return (
 
-    <footer className="bg-white dark:bg-gray-800 w-full py-8">
+    <footer className="bg-white bg-gray-800 w-full py-8">
     <div className="max-w-screen-xl px-4 mx-auto">
         
         <div className="pt-8 flex max-w-xs mx-auto items-center justify-between">
@@ -43,5 +43,5 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;
 

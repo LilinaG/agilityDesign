@@ -9,6 +9,7 @@ import Equip from './pages/Equip'
 import Services from '../src/pages/Services'
 //import Gallery from '../src/pages/Gallery'
 import Methodology from '../src/pages/Methodology'
+import Contact from '../src/pages/Contacto'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         {/* <Gallery /> */}
         <Methodology/>
         <Equip />
+        <Contact />
         <Footer/> 
        
         
