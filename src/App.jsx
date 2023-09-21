@@ -15,7 +15,9 @@
 // import ProjectsDashboard from './pages/ProjectsDashboard'
 // import Pagination from '../src/components/atoms/Pagination'
 import ProjectForm from './components/molecules/ProjectForm'
-import { BrowserRouter } from "react-router-dom"
+//import { BrowserRouter } from "react-router-dom"
+import Router from './configuration/Router';
+
 
 
 
@@ -24,7 +26,7 @@ const App = () => {
     return (
 
         <>
-
+ <Router>
         {/* <Navbar/> 
         <Banner/>
         <Services/> 
@@ -40,13 +42,9 @@ const App = () => {
         {/* <ProjectList/> */}
         {/* <ProjectsDashboard/> */}
         {/* <Pagination/> */}
-        <BrowserRouter>
-            <Routes>
-                <Route path='/admin/projects/create' element={ <ProjectForm/> } />
-            </Routes>
+        <ProjectForm/>
         
-        </BrowserRouter>
-        
+        </Router>  
 
 
         
