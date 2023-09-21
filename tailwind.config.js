@@ -1,11 +1,39 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}"
   ],
+
+  important: true,
+  // Active dark mode on class basis
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'mona-sans': ['Mona-Sans', 'sans'],
+      },
+      backgroundImage: {
+        'hand2': 'url("./src/assets/images/hand2.jpg")'
+      }
+    },
+    screens: {
+      'sm': '320px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
+  screens: {
+    light: { raw: "(prefers-color-scheme: light)" },
+    dark: { raw: "(prefers-color-scheme: dark)" }
+  }
 }
+
+
+
+ 
