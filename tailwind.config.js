@@ -4,9 +4,10 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
+
   important: true,
   // Active dark mode on class basis
-  darkMode: "class",
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
       fontFamily: {
@@ -32,3 +33,7 @@ module.exports = {
     dark: { raw: "(prefers-color-scheme: dark)" }
   }
 }
+
+
+
+ 

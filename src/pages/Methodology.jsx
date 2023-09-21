@@ -12,7 +12,7 @@ const Methodology = () => {
           Somos los máster del "<strong className="text-black">yo me lo guiso yo me lo como</strong>", no dependemos de terceros, comunicación directa con el cliente de principio a fin. <br /><br />
         </p>
         
-        <div className="flex justify-center md:justify-start mt-12 mx-60"> 
+        <div className="flex justify-center md:justify-start mt-6 mx-60"> 
           <a
             href="#"
             className="px-4 py-2 font-bold text-white uppercase bg-yellow-500 border-2 border-transparent rounded-lg text-md hover:bg-gray-400"
