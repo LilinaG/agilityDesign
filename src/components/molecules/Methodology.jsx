@@ -1,5 +1,5 @@
 import React from 'react';
-import pencil from '../assets/images/pencil.jpg';
+import pencil from '../../assets/images/pencil.jpg';
 
 const Methodology = () => {
   return (
@@ -14,7 +14,7 @@ const Methodology = () => {
         
         <div className="flex justify-center md:justify-start mt-6 mx-60"> 
           <a
-            href="#"
+            href="#contacto"
             className="px-4 py-2 font-bold text-white uppercase bg-yellow-500 border-2 border-transparent rounded-lg text-md hover:bg-gray-400"
           >
             ¿Tomamos un café?
