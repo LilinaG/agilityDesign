@@ -1,7 +1,7 @@
-import CardServices from "../components/atoms/CardServices";
-import service1 from '../../src/assets/images/service1.png';
-import service2 from '../../src/assets/images/service2.png';
-import service3 from '../../src/assets/images/service3.png';
+import CardServices from "../atoms/CardServices";
+import service1 from '../../assets/images/service1.png'
+import service2 from '../../assets/images/service2.png';
+import service3 from '../../assets/images/service3.png';
 
 
   

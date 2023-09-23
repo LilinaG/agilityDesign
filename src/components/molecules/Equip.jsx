@@ -1,6 +1,6 @@
 
-import avatar1 from '../assets/images/avatar1.jpg'
-import avatar2 from '../assets/images/avatar2.jpg'
+import avatar1 from '../../assets/images/avatar1.jpg'
+import avatar2 from '../../assets/images/avatar2.jpg'
 
 function Equip() {
   return (

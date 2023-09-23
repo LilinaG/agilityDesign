@@ -1,9 +1,8 @@
 
-import ContactForm from '../components/atoms/ContactForm'
+import ContactForm from '../atoms/ContactForm'
 
-function Contacto() {
+function Contact() {
   return (
-
     <div className= "">
 
         <h2 className="text-4xl font-semibold text-gray-800 mt-20 mb-6 uppercase font-mona-sans tracking-widest flex items-center justify-center space-x-4">
@@ -16,5 +15,4 @@ function Contacto() {
     </div>
   )
 }
-
-export default Contacto
+export default Contact;

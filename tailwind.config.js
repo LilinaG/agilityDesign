@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mona-sans': ['Mona-Sans', 'sans'],
+        'mona-sans': ['Mona-Sans', 'sans']
       },
       backgroundImage: {
         'hand2': 'url("./src/assets/images/hand2.jpg")'
@@ -28,10 +28,6 @@ module.exports = {
   plugins: [
     
   ],
-  screens: {
-    light: { raw: "(prefers-color-scheme: light)" },
-    dark: { raw: "(prefers-color-scheme: dark)" }
-  }
 }
 
 
