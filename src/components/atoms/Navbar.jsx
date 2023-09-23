@@ -1,6 +1,7 @@
 import React, { useState } from 'react';    
 import logoTransparent from '../../assets/images/logoTransparent.png'
 
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
