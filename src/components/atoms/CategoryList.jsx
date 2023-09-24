@@ -7,7 +7,7 @@ function CategoryList() {
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/admin/categories')
       .then((response) => {
-        setCategories(response.data.data); // Accede a la propiedad 'data' del objeto de respuesta
+        setCategories(response.data.data); 
       })
       .catch((error) => {
         console.error(error);
@@ -15,10 +15,8 @@ function CategoryList() {
   }, []);
 
   const handleDelete = (id) => {
-    // Realiza una solicitud DELETE a tu API para eliminar una categoría por ID
     axios.delete(`http://127.0.0.1:8000/api/admin/categories/${id}`)
       .then(() => {
-        // Actualiza la lista de categorías después de eliminar
         setCategories(categories.filter((category) => category.id !== id));
       })
       .catch((error) => {
@@ -42,8 +40,7 @@ function CategoryList() {
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{category.id}</td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{category.name}</td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                <button onClick={() => window.open(`/admin/categories/edit/${category.id}`, '_blank')} className="text-white hover:text-white bg-black p-2 rounded">Editar</button>
-                <button onClick={() => handleDelete(category.id)} className="text-white hover:text-white bg-yellow-400 p-2 rounded mt-2">Borrar</button>
+                <button onClick={() => handleDelete(category.id)} className="text-white hover:text-white bg-black p-2 rounded mt-2">Borrar</button>
               </td>
             </tr>
           ))}
