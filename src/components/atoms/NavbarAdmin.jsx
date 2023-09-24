@@ -18,11 +18,10 @@ const NavbarAdmin = () => {
             <img className="w-72 h-20" src={logoTransparent} alt="logo" />
           </div>
           <div className="hidden md:flex space-x-10 mr-20">
-            <a href="#" className="hover:text-gray-400 text-base font-mona-sans">INICIO</a>
-            <a href="#" className="hover:text-gray-400 text-base font-mona-sans">PROYECTOS</a>
-            <a href="#" className="hover:text-gray-400 text-base font-mona-sans">CATEGORÍAS</a>
-            <a href="#" className="hover:text-gray-400 text-base font-mona-sans">CONTACTO</a>
-            <a href="#" className="hover:text-gray-400 text-yellow-400 text-base font-mona-sans font-bold">NUEVO PROYECTO</a>
+            <a href="#inicio" className="hover:text-gray-400 text-base font-mona-sans">INICIO</a>
+            <a href="#proyectos" className="hover:text-gray-400 text-base font-mona-sans">PROYECTOS</a>
+            <a href="#categorías" className="hover:text-gray-400 text-base font-mona-sans">CATEGORÍAS</a>
+            <a href="crear" className="hover:text-gray-400 text-yellow-400 text-base font-mona-sans font-bold">NUEVO PROYECTO</a>
             <a href="#" className="hover:text-gray-400 text-white bg-black p-2 text-base rounded">Cerrar</a>
           </div>
           <div className="md:hidden flex items-center">
@@ -40,16 +39,16 @@ const NavbarAdmin = () => {
           <div className="container mx-auto py-2">
             <ul className="space-y-2">
               <li>
-                <a href="#" className="block py-2 px-4 hover:bg-gray-700">INICIO</a>
+                <a href="#proyectos" className="block py-2 px-4 hover:bg-gray-700">INICIO</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-4 hover:bg-gray-700">PROYECTOS</a>
+                <a href="#proyectos" className="block py-2 px-4 hover:bg-gray-700">PROYECTOS</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-4 hover:bg-gray-700">CATEGORÍAS</a>
+                <a href="#categorías" className="block py-2 px-4 hover:bg-gray-700">CATEGORÍAS</a>
               </li>
               <li>
-                <a href="#" className="block py-2 px-4 hover:bg-gray-700">NUEVO PROYECTO</a>
+                <a href="crear" className="block py-2 px-4 hover:bg-gray-700">NUEVO PROYECTO</a>
               </li>
               <li>
                 <a href="#" className="block py-2 px-4 hover:bg-gray-700">CERRAR</a>

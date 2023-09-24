@@ -3,9 +3,6 @@ import service1 from '../../assets/images/service1.png'
 import service2 from '../../assets/images/service2.png';
 import service3 from '../../assets/images/service3.png';
 
-
-  
-
 function Services() {
 
 
@@ -26,8 +23,6 @@ function Services() {
           imageSrc: service3 
         },
       ];
-
-      
 
   return (
     <div className= "">
@@ -53,4 +48,7 @@ function Services() {
   )
 }
 
-export default Services
+export default Services;
+
+
+
