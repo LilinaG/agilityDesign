@@ -5,7 +5,6 @@ function ProjectList() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Realiza una solicitud GET a tu API para obtener los proyectos
     axios.get('http://127.0.0.1:8000/api/admin/projects')
       .then((response) => {
         setProjects(response.data);
@@ -51,7 +50,10 @@ function ProjectList() {
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.url}</td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.category}</td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                <button onClick={() => handleDelete(project.id)} className="text-white hover:text-white bg-black p-2 rounded">Editar</button>
+                {/* <button onClick={() => handleDelete(project.id)} className="text-white hover:text-white bg-black p-2 rounded">Editar</button> */}
+                <button onClick={() => window.open(`/admin/projects/edit/${project.id}`, '_blank')} className="text-white hover:text-white bg-black p-2 rounded">Editar</button>
+                <a href={`/admin/projects/edit/${project.id}`} target="_blank" rel="noopener noreferrer">Editar</a>
+
                 <button onClick={() => handleDelete(project.id)} className="text-white hover:text-white bg-yellow-400 p-2 rounded mt-2">Borrar</button>
               </td>
             </tr>

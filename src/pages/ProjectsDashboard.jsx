@@ -7,8 +7,14 @@ import Pagination from "../components/atoms/Pagination";
 function ProjectsDashboard() {
   return (
     <>
-    <NavbarAdmin/>
-    <ProjectList/>
+    <div id='proyectos'>
+        <NavbarAdmin/>
+    </div>
+    
+    <div id='proyectos'>
+        <ProjectList/>
+    </div>
+
     <Pagination/>
     </>
   )

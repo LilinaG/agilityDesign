@@ -1,36 +1,47 @@
-// import React, { useState, useEffect } from 'react';
-// import ImageCard from './components/ImageCard';
-// import ImageSearch from './components/ImageSearch';
+import React, { useEffect, useState } from 'react';
+import GalleryCard from '../atoms/GalleryCard'; // Asegúrate de que la ruta sea correcta.
+import Navbar from '../atoms/Navbar'
+import ProjectSearch from '../atoms/projectSearch';
 
+function Gallery() {
+  const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [term, setTerm] = useState('');
 
-// function Gallery() {
-//   const [images, setImages] = useState([]);
-//   const [isLoading, setIsLoading] = useState(true);
-//   const [term, setTerm] = useState('');
+  useEffect(() => {
+    // Supongamos que obtienes los proyectos de una API
+    fetch('http://127.0.0.1:8000/api/admin/projects')
+      .then((response) => response.json())
+      .then((data) => {
+        setProjects(data); // Actualiza el estado con los datos de la API
+        setIsLoading(false); // Indica que la carga ha finalizado
+      })
+      .catch((error) => {
+        console.error('Error al obtener proyectos:', error);
+      });
+  }, [term]);
 
-//   useEffect(() => {
-//     fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`)
-//       .then(res => res.json())
-//       .then(data => {
-//         setImages(data.hits);
-//         setIsLoading(false);
-//       })
-//       .catch(err => console.log(err));
-//   }, [term]);
+  return (
+    <div>
+      <Navbar />
+      <ProjectSearch searchText={(text) => setTerm(text)}/>
+      {!isLoading && projects.length === 0 && <h3 className="text-5xl text-center mx-auto mt-32">
+        No se han encontrado proyectos </h3>}
 
-//   return (
-//     <div className="container mx-auto">
-//       <ImageSearch searchText={(text) => setTerm(text)} />
+    
+    <div className="container mx-auto mt-40 ml-16">
+      <div className="grid grid-cols-3 gap-4">
+        {isLoading ? (
+          <p>Cargando proyectos...</p>
+        ) : (
+          projects.map((project) => (
+            <GalleryCard key={project.id} project={project} />
+          ))
+        )}
+      </div>
+    </div>
+    </div>
+  );
+}
 
-//       {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto mt-32">No Images Found</h1> }
-
-//       {isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1> : <div className="grid grid-cols-3 gap-4">
-//         {images.map(image => (
-//           <ImageCard key={image.id} image={image} />
-//         ))}
-//       </div>}
-//     </div>
-//   );
-// }
-
-// export default Gallery;
+export default Gallery;
