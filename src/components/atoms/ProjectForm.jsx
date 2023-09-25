@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import NavbarAdmin from './NavbarAdmin';
 
 const endpoint = 'http://127.0.0.1:8000/api/admin/projects';
 
 function ProjectForm() {
+    const [inputValue, setInputValue] = useState(''); // Proporciona un valor inicial vacío o válido
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
@@ -40,12 +41,15 @@ function ProjectForm() {
             <div className="mb-6">
               <label className="block text-gray-700 font-bold mb-2">Descripción</label><br/>
               <input
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
                 type="text"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                 placeholder="Escribe la descripción aquí"
               />
+
+
+
             </div><br/>
       
             <div className="mb-6">
@@ -83,10 +87,11 @@ function ProjectForm() {
       
             <button
               type="submit"
-              className="w-1/3 bg-yellow-400 hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded-lg"
+              className="w-1/3 bg-black hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg"
             >
               Guardar
             </button>
+             
           </form>
         </div>
       </div> 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';    
-import logoTransparent from '../../assets/images/logoTransparent.png'
+import logoTransparent from '../../assets/images/logoTransparent.png';
+import { Link } from 'react-router-dom';
 
 const NavbarAdmin = () => {
   const [open, setOpen] = useState(false);
@@ -18,11 +19,11 @@ const NavbarAdmin = () => {
             <img className="w-72 h-20" src={logoTransparent} alt="logo" />
           </div>
           <div className="hidden md:flex space-x-10 mr-20">
-            <a href="#inicio" className="hover:text-gray-400 text-base font-mona-sans">INICIO</a>
-            <a href="#proyectos" className="hover:text-gray-400 text-base font-mona-sans">PROYECTOS</a>
-            <a href="#categorías" className="hover:text-gray-400 text-base font-mona-sans">CATEGORÍAS</a>
-            <a href="crear" className="hover:text-gray-400 text-yellow-400 text-base font-mona-sans font-bold">NUEVO PROYECTO</a>
-            <a href="#" className="hover:text-gray-400 text-white bg-black p-2 text-base rounded">Cerrar</a>
+          <Link to="/" className="hover:text-gray-400 text-base font-mona-sans">INICIO</Link>
+            <Link to="/admin/projects" className="hover:text-gray-400 text-base font-mona-sans">PROYECTOS</Link>
+            <Link to="/admin/categories" className="hover:text-gray-400 text-base font-mona-sans">CATEGORÍAS</Link>
+            <Link to="/admin/projects/create" className="hover:text-gray-400 text-yellow-400 text-base font-mona-sans font-bold">NUEVO PROYECTO</Link>
+            <Link to="/" className="hover:text-gray-400 text-white bg-black p-2 text-base rounded">Cerrar</Link>
           </div>
           <div className="md:hidden flex items-center">
   <button
@@ -39,19 +40,19 @@ const NavbarAdmin = () => {
           <div className="container mx-auto py-2">
             <ul className="space-y-2">
               <li>
-                <a href="#proyectos" className="block py-2 px-4 hover:bg-gray-700">INICIO</a>
+              <Link to="/" className="block py-2 px-4 hover:bg-gray-700">INICIO</Link>
               </li>
               <li>
-                <a href="#proyectos" className="block py-2 px-4 hover:bg-gray-700">PROYECTOS</a>
+                <Link to="/admin/projects" className="block py-2 px-4 hover:bg-gray-700">PROYECTOS</Link>
               </li>
               <li>
-                <a href="#categorías" className="block py-2 px-4 hover:bg-gray-700">CATEGORÍAS</a>
+                <Link to="/admin/categories" className="block py-2 px-4 hover:bg-gray-700">CATEGORÍAS</Link>
               </li>
               <li>
-                <a href="crear" className="block py-2 px-4 hover:bg-gray-700">NUEVO PROYECTO</a>
+                <Link to="/admin/projects/create" className="block py-2 px-4 hover:bg-gray-700">NUEVO PROYECTO</Link>
               </li>
               <li>
-                <a href="#" className="block py-2 px-4 hover:bg-gray-700">CERRAR</a>
+                <Link to="/" className="block py-2 px-4 hover:bg-gray-700">CERRAR</Link>
               </li>
             </ul>
           </div>

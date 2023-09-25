@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function CategoryList() {
   const [categories, setCategories] = useState([]);
@@ -25,7 +26,8 @@ function CategoryList() {
   };
 
   return (
-    <div className="container mx-auto">
+    <>
+    <div className="container mx-auto flex flex-col items-center">
       <table className="mx-20 my-40">
         <thead className="">
           <tr>
@@ -46,7 +48,15 @@ function CategoryList() {
           ))}
         </tbody>
       </table>
-    </div>
+   
+
+    <div className="-mt-32 mb-10">
+    <Link to="/admin/categories/create" className="text-white bg-black hover:bg-gray-600 py-2 rounded px-6">
+      Nueva Categoría
+    </Link>
+  </div>
+  </div>
+  </>
   );
 }
 
