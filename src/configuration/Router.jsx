@@ -6,6 +6,7 @@ import LandingPage from '../pages/LandingPage';
 import EditForm from '../components/atoms/EditForm';
 import Gallery from '../components/molecules/Gallery';
 import CategoriesDashboard from '../pages/CategoriesDashboard';
+import CategoryForm from '../components/atoms/CategoryForm';
 import Login from '../pages/Login'
 
 const Router = () => {
@@ -21,6 +22,7 @@ const Router = () => {
                 <Route path='/admin/projects/create' element={ <ProjectForm/> } />
                 <Route path="/admin/projects/edit/:id" element={<EditForm />} />
                 <Route path="/admin/categories" element={<CategoriesDashboard />} />
+                <Route path="/admin/categories/create" element={<CategoryForm />} />
 
                
             </Routes>
