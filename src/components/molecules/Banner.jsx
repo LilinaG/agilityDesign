@@ -19,10 +19,10 @@ const Banner = () => {
         </div>
 
         <div className="w-full md:w-1/2 p-8 text-center md:text-left">
-          <h2 className="text-6xl md:text-7xl font-semibold text-gray-800 font-mona-sans leading-tight">
+          <h4 className="text-9xl md:text-7xl text-gray-800 font-roboto font-black leading-tight">
           Ideas Ágiles. <br/> Diseños Asombrosos.
-          </h2>
-          <h3 className="text-5xl md:text-3xl text-gray-600 font-mona-sans mt-4 leading-tight">
+          </h4>
+          <h3 className="text-4xl md:text-3xl text-gray-600 font-roboto font-black mt-4 leading-tight">
           Tu proyecto, <br/> nuestra pasión.
           </h3>
 
