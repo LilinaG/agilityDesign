@@ -46,7 +46,8 @@ function ProjectList() {
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.description}</td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.image}</td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.url}</td>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.category}</td>
+              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{project.category ? project.category.name : 'Sin categoría'}</td>
+              
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                 {/* <button onClick={() => handleDelete(project.id)} className="text-white hover:text-white bg-black p-2 rounded">Editar</button> */}
                 <button onClick={() => window.open(`/admin/projects/edit/${project.id}`, '_blank')} className="text-white hover:text-white bg-black p-2 rounded">Editar</button>

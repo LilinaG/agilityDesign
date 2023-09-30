@@ -9,9 +9,10 @@ function EditForm() {
     description: '',
     image: '',
     url: '',
-    category: '',
+    category: null, 
   });
 
+  const [categories, setCategories] = useState([]);
   const { id } = useParams(); // Obtener el ID del proyecto de la URL
   const navigate = useNavigate();
 
@@ -33,11 +34,19 @@ function EditForm() {
     navigate('/admin/projects'); // Redirigir al listado de proyectos después de la edición
   };
 
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setProjectData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProjectData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: name === 'category' ? { id: value } : value,
     }));
   };
 
@@ -95,8 +104,35 @@ function EditForm() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               />
             </div><br/>
+
+            <select
+  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+  name="category"
+  value={projectData.category ? projectData.category.id : ''}
+  onChange={handleChange}
+>
+  <option value="">Selecciona una categoría</option>
+  {categories.map((category) => (
+    <option key={category.id} value={category.id}>
+      {category.name}
+    </option>
+  ))}
+</select>
       
-            <div className="mb-6">
+{/* <select
+  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+  name="category"
+  value={projectData.category ? projectData.category.id : ''}
+  onChange={handleChange}
+>
+  <option value="">Selecciona una categoría</option>
+  {props.categories.map((category) => (
+    <option key={category.id} value={category.id}>
+      {category.name}
+    </option>
+  ))}
+</select> */}
+            {/* <div className="mb-6">
               <label className="block text-gray-700 font-bold mb-2">Categoría</label><br/>
               <input
                 value={projectData.category}
@@ -105,7 +141,21 @@ function EditForm() {
                 name="category"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               />
-            </div><br/>
+            </div><br/> */}
+
+
+            {/* <div className="mb-6">
+            <label className="block text-gray-700 font-bold mb-2">Selecciona una categoría</label><br/>
+              <select 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                  value={selectedCategory} 
+                  onChange={(e) => setSelectedCategory(e.target.value)}>
+                  <option value="">Selecciona una categoría</option>
+                  {categories.map((category) => (
+                  <option key={category.id} value={category.id}>{category.name}</option>
+                  ))}
+              </select>
+              </div> */}
       
             <button
               type="submit"
