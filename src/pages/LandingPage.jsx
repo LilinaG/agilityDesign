@@ -9,7 +9,7 @@ import Footer from '../components/atoms/Footer'
 function LandingPage() {
   return (
     <>
-        {/* <Navbar/> */}
+        
         <div id="inicio">
             <Banner/>
         </div>
@@ -17,7 +17,6 @@ function LandingPage() {
             <Services/>
         </div>
         <div id= 'galería'>
-            {/* <Gallery/> */}
         </div>
         <div id= 'metodología'>
             <Methodology/>
