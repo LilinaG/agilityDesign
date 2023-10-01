@@ -20,4 +20,4 @@ function ProjectsDashboard() {
   )
 }
 
-export default ProjectsDashboard;
+export default ProjectsDashboard
