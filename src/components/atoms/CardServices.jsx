@@ -11,7 +11,7 @@ const CardServices = ({ title, text, imageSrc }) => {
             className="w-full h-64 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-xl font-roboto-bold text-gray-800 mb-2">{title}</h3>
+            <h3 className="text-xl font-roboto font-bold text-gray-800 mb-2">{title}</h3>
             <p className="text-l text-gray-600">{text}</p>
           </div>
         </div>
