@@ -1,5 +1,5 @@
 import React, { useState } from 'react';    
-import logoTransparent from '../../assets/images/logoTransparent.png';
+import Logo2Transparent from '../../assets/images/Logo2Transparent.png';
 import { Link } from 'react-router-dom';
 
 const NavbarAdmin = () => {
@@ -16,7 +16,7 @@ const NavbarAdmin = () => {
       <div className="container mx-auto py-4">
         <div className="flex items-center justify-between font-roboto">
           <div className="flex items-center">
-            <img className="w-72 h-20" src={logoTransparent} alt="logo" />
+            <img className="w-72 h-20 mx-6" src={Logo2Transparent} alt="logo" />
           </div>
           <div className="hidden md:flex space-x-10 mr-20">
           <Link to="/" className="hover:text-gray-400 text-base font-roboto">INICIO</Link>

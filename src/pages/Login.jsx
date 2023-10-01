@@ -1,4 +1,4 @@
-import logoTransparent from '../assets/images/logoTransparent.png';
+import Logo2Transparent from '../assets/images/Logo2Transparent.png';
 import idea from '../assets/images/idea.jpg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -28,7 +28,7 @@ const LoginForm = () => {
     <div className="flex flex-wrap w-full">
       <div className="flex flex-col w-full md:w-1/2">
         <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
-          <img className="w-72 h-20 flex justify-center" src={logoTransparent} alt="logo" />
+          <img className="w-72 h-20 flex justify-center" src={Logo2Transparent} alt="logo" />
           <form className="flex flex-col pt-3 md:pt-8" onSubmit={handleSubmit}>
             <div className="flex flex-col pt-4">
               <div className="flex relative">
