@@ -24,7 +24,7 @@ const handleSubmit = (event) => {
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg">
-      <h2 className="text-2xl font-roboto text-gray-800 mb-4 mt-20">¡Cuéntanos tu proyecto!</h2>
+      <h2 className="text-2xl font-roboto font-semibold text-gray-800 mb-4 mt-20">¡Cuéntanos tu proyecto!</h2>
       <form 
         ref={refForm}
         onSubmit={handleSubmit}>
