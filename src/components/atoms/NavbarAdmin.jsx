@@ -1,5 +1,5 @@
 import React, { useState } from 'react';    
-import Logo2Transparent from '../../assets/images/logoTransparent.png';
+import Logo2Transparent from '../../assets/images/Logo2Transparent.png';
 import { Link } from 'react-router-dom';
 
 const NavbarAdmin = () => {
