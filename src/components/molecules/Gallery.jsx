@@ -9,12 +9,11 @@ function Gallery() {
   const [term, setTerm] = useState('');
 
   useEffect(() => {
-    // Supongamos que obtienes los proyectos de una API
     fetch('http://127.0.0.1:8000/api/admin/projects')
       .then((response) => response.json())
       .then((data) => {
-        setProjects(data); // Actualiza el estado con los datos de la API
-        setIsLoading(false); // Indica que la carga ha finalizado
+        setProjects(data); 
+        setIsLoading(false); 
       })
       .catch((error) => {
         console.error('Error al obtener proyectos:', error);

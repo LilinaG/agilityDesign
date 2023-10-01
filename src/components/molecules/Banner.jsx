@@ -29,7 +29,7 @@ const Banner = () => {
           <div className="flex justify-center mt-12">
             <a
             href="#contacto"
-            className="px-4 py-2 font-bold text-white uppercase bg-yellow-500 border-2 border-transparent rounded-lg text-md hover:bg-gray-400"
+            className="px-4 py-2 font-roboto font-bold text-white uppercase bg-yellow-500 border-2 border-transparent rounded-lg text-md hover:bg-gray-400"
             >
               ¿Hablamos?
             </a>

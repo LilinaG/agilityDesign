@@ -29,13 +29,11 @@ const Navbar = () => {
 
   return (
 
-    // <nav className={`fixed z-20 top-0 left-0 right-0 text-black text-bold font-mona-sans ${open ? 'bg-white' : 'bg-transparent'}`}>
-  
-  // <nav className={`fixed z-20 top-0 left-0 right-0 text-black text-bold font-mona-sans ${open ? 'bg-white' : scrolling ? 'bg-white' : 'bg-transparent'}`}>
+   
   <nav className={`fixed z-20 top-0 left-0 right-0 text-black text-bold font-roboto ${open || scrolling ? 'bg-white' : 'bg-transparent'}`}>
 
       <div className="container mx-auto">
-        <div className="flex items-center justify-between font-sans">
+        <div className="flex items-center justify-between font-roboto">
           <div className="flex items-center">
             <img className="w-72 h-20" src={logoTransparent} alt="logo" />
           </div>

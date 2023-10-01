@@ -10,19 +10,19 @@ const NavbarAdmin = () => {
   };
 
   return (
-    <nav className={`fixed z-20 top-0 left-0 right-0 bg-white text-black text-bold font-mona-sans ${open ? 'bg-white' : 'bg-transparent'}`}>
+    <nav className={`fixed z-20 top-0 left-0 right-0 bg-white text-black text-bold font-roboto ${open ? 'bg-white' : 'bg-transparent'}`}>
   
   
       <div className="container mx-auto py-4">
-        <div className="flex items-center justify-between font-sans">
+        <div className="flex items-center justify-between font-roboto">
           <div className="flex items-center">
             <img className="w-72 h-20" src={logoTransparent} alt="logo" />
           </div>
           <div className="hidden md:flex space-x-10 mr-20">
-          <Link to="/" className="hover:text-gray-400 text-base font-mona-sans">INICIO</Link>
-            <Link to="/admin/projects" className="hover:text-gray-400 text-base font-mona-sans">PROYECTOS</Link>
-            <Link to="/admin/categories" className="hover:text-gray-400 text-base font-mona-sans">CATEGORÍAS</Link>
-            <Link to="/admin/projects/create" className="hover:text-gray-400 text-yellow-400 text-base font-mona-sans font-bold">NUEVO PROYECTO</Link>
+          <Link to="/" className="hover:text-gray-400 text-base font-roboto">INICIO</Link>
+            <Link to="/admin/projects" className="hover:text-gray-400 text-base font-roboto">PROYECTOS</Link>
+            <Link to="/admin/categories" className="hover:text-gray-400 text-base font-roboto">CATEGORÍAS</Link>
+            <Link to="/admin/projects/create" className="hover:text-gray-400 text-yellow-400 text-base font-roboto font-bold">NUEVO PROYECTO</Link>
             <Link to="/" className="hover:text-gray-400 text-white bg-black p-2 text-base rounded">Cerrar</Link>
           </div>
           <div className="md:hidden flex items-center">

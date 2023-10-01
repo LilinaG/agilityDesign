@@ -24,13 +24,13 @@ const handleSubmit = (event) => {
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg">
-      <h2 className="text-2xl font-mona-sans text-gray-800 mb-4 mt-20">¡Cuéntanos tu proyecto!</h2>
+      <h2 className="text-2xl font-roboto text-gray-800 mb-4 mt-20">¡Cuéntanos tu proyecto!</h2>
       <form 
         ref={refForm}
         onSubmit={handleSubmit}>
         <div className="mb-4">
           <fieldset className="fiel-name">
-          <label htmlFor="" className="block text-yellow-400 font-mona-sans mb-2 h-10">
+          <label htmlFor="" className="block text-yellow-400 font-roboto mb-2 h-10">
             Nombre
           </label>
           
@@ -46,7 +46,7 @@ const handleSubmit = (event) => {
         </div>
         <div className="mb-4">
         <fieldset className="fiel-email">
-          <label htmlFor="email" className="block text-yellow-400 font-semibold mb-2 font-mona-sans h-10">
+          <label htmlFor="email" className="block text-yellow-400 font-semibold mb-2 font-roboto h-10">
             Email
           </label>
           <input
@@ -61,7 +61,7 @@ const handleSubmit = (event) => {
         </div>
         <div className="mb-4">
         <fieldset className="fiel-message">
-          <label htmlFor="message" className="block text-yellow-400 font-semibold mb-2 font-mona-sans">
+          <label htmlFor="message" className="block text-yellow-400 font-semibold mb-2 font-roboto">
             Mensaje
           </label>
           <textarea
