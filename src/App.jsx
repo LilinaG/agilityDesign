@@ -1,15 +1,16 @@
+import Router from './configuration/Router';
+//import GalleryCard from '../src/components/atoms/GalleryCard'
+//import Gallery from './components/molecules/Gallery'
 
 
-import Router from "./configuration/Router"
 
-
-
-const App = () => {
+function App() {
 
     return (
-        <>
-        <Router/>
-        </>
+      <>
+        <Router></Router>
+      </>
+    
     )
-}
+  }  
 export default App

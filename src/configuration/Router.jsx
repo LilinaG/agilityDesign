@@ -1,26 +1,35 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ShowProjects } from '../BackComponents/ProjectsComponents/ShowProjects';
-import { CreateProjects } from '../BackComponents/ProjectsComponents/CreateProjects';
-import { EditProjects } from '../BackComponents/ProjectsComponents/EditProjects';
+import ProjectForm from '../components/atoms/ProjectForm';
+import ProjectsDashboard from '../pages/ProjectsDashboard';
+import LandingPage from '../pages/LandingPage';
+import EditForm from '../components/atoms/EditForm';
+import Gallery from '../components/molecules/Gallery';
+import CategoriesDashboard from '../pages/CategoriesDashboard';
+import CategoryForm from '../components/atoms/CategoryForm';
+import Login from '../pages/Login'
 
 const Router = () => {
-
-  
   return (
     <>
-    <div className="">
-       <BrowserRouter>
+    
+      <BrowserRouter>
             <Routes>
-              <Route path='/admin/projects' element={ <ShowProjects/> } />
-              <Route path='/admin/projects/create' element={ <CreateProjects/> } />
-              <Route path='/admin/projects/edit/:id' element={ <EditProjects/> } />
-            </Routes>
+                <Route path="/" element={<LandingPage/>}/>
+                <Route path="/galeria" element={<Gallery />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/admin/projects" element={<ProjectsDashboard />} />
+                <Route path='/admin/projects/create' element={ <ProjectForm/> } />
+                <Route path="/admin/projects/edit/:id" element={<EditForm />} />
+                <Route path="/admin/categories" element={<CategoriesDashboard />} />
+                <Route path="/admin/categories/create" element={<CategoryForm />} />
 
+               
+            </Routes>
        </BrowserRouter>
-    </div>
+   
     </>
   )
 }
+export default Router;
 
-export default Router
