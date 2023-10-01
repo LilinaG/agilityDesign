@@ -1,8 +1,22 @@
-# React + Vite
+<h1 align="center"> Agility Design </h1>
+<h2 align="center">Plataforma de Diseño Gráfico y Desarrollo Web </h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![paginaInicio](https://github.com/LilinaG/agilityDesignB/blob/feature/readme/resources/assets/paginaInicio.png)
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
+Este respositorio corresponde a la parte del frontend de Agility Design. Este proyecto consiste en el desarrollo de una plataforma web profesional que ofrece servicios integrales de diseño gráfico y desarrollo web. La plataforma permite a los usuarios explorar servicios, ver portfolios de trabajos anteriores, solicitar presupuestos y ponerse en contacto con profesionales del diseño y desarrollo web.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías del Proyecto
+
+- ReactJS + Vite.
+- TailwindCSS.
+- Axios
+- emailJS.
+
+## Instalación y Uso
+
+1. Clona este repositorio en tu máquina local.
+2. "npm install" para inicializar todas las dependencias.
+3. Reemplaza la url de la API con la url actual de la API del backend.
+4. Necesitarás también una cuenta en "emailJS".
+
