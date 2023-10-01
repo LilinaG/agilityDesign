@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Roboto': ['Roboto', 'sans-serif']
+        'mona-sans': ['Mona-Sans', 'sans']
       },
       backgroundImage: {
         'hand2': 'url("./src/assets/images/hand2.jpg")'

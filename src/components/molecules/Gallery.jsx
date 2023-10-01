@@ -46,7 +46,7 @@ const getAllCategories = async () => {
       <Navbar />
       {/* <ProjectSearch searchText={(text) => setTerm(text)}/>
       {!isLoading && projects.length === 0 && <h3 className="text-5xl text-center mx-auto mt-32">
-        No se han encontrado proyectos </h3>}  */}
+        No se han encontrado proyectos </h3>} */}
 
     
     <div className="container mx-auto mt-40 ml-16">
@@ -61,5 +61,3 @@ const getAllCategories = async () => {
 }
 
 export default Gallery;
-
-

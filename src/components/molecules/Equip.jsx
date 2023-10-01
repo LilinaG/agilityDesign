@@ -5,10 +5,10 @@ import avatar2 from '../../assets/images/avatar2.jpg'
 function Equip() {
   return (
 <div className="text-center mt-20">
-      <h2 className="text-4xl font-semibold text-gray-800 mt-8 mb-6 uppercase font-roboto tracking-widest flex items-center justify-center space-x-4">
+      <h2 className="text-4xl font-semibold text-gray-800 mt-8 mb-6 uppercase font-mona-sans tracking-widest flex items-center justify-center space-x-4">
       
         <span className="h-[4px] bg-gray-800 w-20" />
-        <span className="relative z-10 font-roboto font-bold">Conócenos</span>
+        <span className="relative z-10">Conócenos</span>
         
         <span className="h-[4px] bg-gray-800 w-24" />
 
@@ -21,7 +21,7 @@ function Equip() {
         src= { avatar1 }
         alt="Avatar Raúl"/>
         <div className="px-8 pt-32 pb-10 text-gray-400 bg-white rounded-lg shadow-lg">
-            <h3 className="mb-3 text-xl text-gray-800 font-title font-roboto font-semibold">
+            <h3 className="mb-3 text-xl text-gray-800 font-title font-mona-sans">
                 Raúl Romero
             </h3>
             <p className="font-body text-gray-500 font-bold text-m">
@@ -33,7 +33,7 @@ function Equip() {
             <a 
             className="text-gray-500 font-body hover:text-yellow-400"  
             href="#">
-                raulromero@agilitydesign.com
+                raulromero@agilitydesing.com
             </a>
         <div className="flex justify-center mt-4">
 
@@ -51,7 +51,7 @@ function Equip() {
         src= { avatar2}
         alt="Avatar Liliana"/>
         <div className="px-8 pt-32 pb-10 text-gray-400 bg-white rounded-lg shadow-lg">
-            <h3 className="mb-3 text-xl text-gray-800 font-title font-roboto font-semibold">
+            <h3 className="mb-3 text-xl text-gray-800 font-title font-mona-sans">
                Liliana Gutiérrez
             </h3>
             <p className="font-body text-gray-500 font-bold text-base">
@@ -63,7 +63,7 @@ function Equip() {
             <a 
             className="text-gray-500 font-body hover:text-yellow-300" 
             href="mailto:lgutierrezfer@agilitydesing.com">
-                lgutierrezfer@agilitydesign.com
+                lgutierrezfer@agilitydesing.com
             </a>
             <div className="flex justify-center mt-4">
 
