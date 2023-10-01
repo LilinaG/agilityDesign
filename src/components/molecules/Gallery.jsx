@@ -1,44 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import GalleryCard from '../atoms/GalleryCard'; // Asegúrate de que la ruta sea correcta.
-import Navbar from '../atoms/Navbar'
+import Navbar from '../atoms/Navbar';
+import axios from 'axios';
 import ProjectSearch from '../atoms/projectSearch';
 
-function Gallery() {
-  const [projects, setProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState('');
 
-  useEffect(() => {
-    // Supongamos que obtienes los proyectos de una API
-    fetch('http://127.0.0.1:8000/api/admin/projects')
-      .then((response) => response.json())
-      .then((data) => {
-        setProjects(data); // Actualiza el estado con los datos de la API
-        setIsLoading(false); // Indica que la carga ha finalizado
-      })
-      .catch((error) => {
-        console.error('Error al obtener proyectos:', error);
-      });
-  }, [term]);
+const endpoint = 'http://127.0.0.1:8000/api/admin';
+const categoriesEndpoint = 'http://127.0.0.1:8000/api/admin/categories';
+
+function Gallery() {
+const [projects, setProjects] = useState([]);
+const [categories, setCategories] = useState([]);
+
+
+
+useEffect(() => {
+  getAllProjects();
+  getAllCategories();
+}, []);
+
+const getAllProjects = async () => {
+  try {
+    const response = await axios.get(`${endpoint}/projects`);
+    console.log(response.data);
+    setProjects(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const getAllCategories = async () => {
+  try {
+    const response = await axios.get(categoriesEndpoint);
+    setCategories(response.data.data);
+  } catch (error) {
+    console.error(error);
+  }
+};  
+
+
+
 
   return (
     <div>
       <Navbar />
-      <ProjectSearch searchText={(text) => setTerm(text)}/>
+      {/* <ProjectSearch searchText={(text) => setTerm(text)}/>
       {!isLoading && projects.length === 0 && <h3 className="text-5xl text-center mx-auto mt-32">
-        No se han encontrado proyectos </h3>}
+        No se han encontrado proyectos </h3>} */}
 
     
     <div className="container mx-auto mt-40 ml-16">
-      <div className="grid grid-cols-3 gap-4">
-        {isLoading ? (
-          <p>Cargando proyectos...</p>
-        ) : (
-          projects.map((project) => (
-            <GalleryCard key={project.id} project={project} />
-          ))
-        )}
-      </div>
+    <div className="grid grid-cols-3 gap-4">
+  {projects.map((project) => (
+    <GalleryCard key={project.id} project={project} categories={categories} />
+  ))}
+</div>
     </div>
     </div>
   );
