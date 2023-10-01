@@ -1,5 +1,11 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
+// const items = [
+//   { id: 1, title: 'Back End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote' },
+//   { id: 2, title: 'Front End Developer', department: 'Engineering', type: 'Full-time', location: 'Remote' },
+//   { id: 3, title: 'User Interface Designer', department: 'Design', type: 'Full-time', location: 'Remote' },
+// ]
+
 export default function Example() {
   return (
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
@@ -33,7 +39,7 @@ export default function Example() {
               <span className="sr-only">Previous</span>
               <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
             </a>
-          
+            {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
             <a
               href="#"
               aria-current="page"
@@ -88,3 +94,69 @@ export default function Example() {
   )
 }
 
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
+
+// function Pagination() {
+//   const [projects, setProjects] = useState([]);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const [totalPages, setTotalPages] = useState(1);
+
+//   useEffect(() => {
+//     // Función para cargar proyectos desde el servidor
+//     const fetchProjects = async () => {
+//       try {
+//         const response = await axios.get(`http://127.0.0.1:8000/api/admin/projects?page=${currentPage}`);
+//         setProjects(response.data.data); // Actualiza con los proyectos en la página actual
+//         setTotalPages(response.data.last_page); // Total de páginas
+//       } catch (error) {
+//         console.error(error);
+//       }
+//     };
+
+//     fetchProjects();
+//   }, [currentPage]);
+
+//   const handlePageChange = (newPage) => {
+//     // Verifica si la nueva página está dentro de los límites
+//     if (newPage >= 1 && newPage <= totalPages) {
+//       setCurrentPage(newPage);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       {/* Renderiza tu lista de proyectos aquí */}
+//       <div>
+//         {projects.map((project) => (
+//           <div key={project.id}>
+//             {/* Renderiza los detalles de cada proyecto */}
+//             <p>{project.title}</p>
+//             {/* Agrega más detalles según tus necesidades */}
+//           </div>
+//         ))}
+//       </div>
+//       {/* Renderiza la paginación */}
+//       <div className="flex justify-between mt-4">
+//         <button
+//           onClick={() => handlePageChange(currentPage - 1)}
+//           disabled={currentPage === 1}
+//         >
+//           <ChevronLeftIcon className="h-5 w-5" />
+//         </button>
+//         <p>
+//           Page {currentPage} of {totalPages}
+//         </p>
+//         <button
+//           onClick={() => handlePageChange(currentPage + 1)}
+//           disabled={currentPage === totalPages}
+//         >
+//           <ChevronRightIcon className="h-5 w-5" />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Pagination;
