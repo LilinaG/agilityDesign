@@ -18,7 +18,6 @@ function ProjectForm() {
   
 
   useEffect(() => {
-    // Obtener las categorías al cargar el formulario
     axios
       .get(categoriesEndpoint)
       .then((res) => {
@@ -47,29 +46,29 @@ function ProjectForm() {
     };
 
     try {
-      // Enviar el proyecto con la categoría seleccionada al servidor
+      
       await axios.post(endpoint, project);
-      navigate('/admin/projects'); // Redirigir después de guardar el proyecto
+      navigate('/admin/projects'); 
     } catch (error) {
       console.error('Error al guardar el proyecto:', error);
     }
   };
 
   
-// En el componente del formulario
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  // Obtiene el valor del select de categorías
+
   const selectedCategory = document.querySelector('select[name="category"]').value;
 
-  // Verifica si el valor del select de categorías está presente
+  
   if (!selectedCategory) {
     console.error('El valor del select de categorías no está presente');
     return;
   }
 
-  // Envía los datos del formulario al servidor
+  
   await axios.post('/api/projects', {
     title: title,
     description: description,

@@ -12,12 +12,11 @@ function EditForm() {
     category_id: '', 
   });
 
-  const { id } = useParams(); // Obtener el ID del proyecto de la URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // Obtener los datos del proyecto al cargar el formulario
     axios.get(`http://127.0.0.1:8000/api/admin/projects/${id}`)
       .then((response) => {
         setProjectData(response.data);
@@ -26,7 +25,6 @@ function EditForm() {
         console.error(error);
       });
 
-    // Obtener las categorías al cargar el formulario
     axios.get('http://127.0.0.1:8000/api/admin/categories')
       .then((response) => {
         setCategories(response.data.data);
@@ -41,7 +39,7 @@ function EditForm() {
     await axios.put(`http://127.0.0.1:8000/api/admin/projects/${id}`, projectData);
     console.log('Proyecto actualizado');
     console.log('Redireccionando a /admin/projects');
-    navigate('/admin/projects'); // Redirigir al listado de proyectos después de la edición
+    navigate('/admin/projects'); 
   };
 
   const handleChange = (e) => {

@@ -18,7 +18,7 @@ const LoginForm = () => {
       console.log('Response Status:', status);
       console.log('Response Data:', data);
 
-      navigateTo('/admin/projects'); // Debes asegurarte de que esta sea la ruta correcta.
+      navigateTo('/admin/projects'); 
     } catch (error) {
       console.error('Error al logear', error);
     }
